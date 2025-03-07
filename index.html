@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- Ejercicio 1 -->
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi Página Web</title>
+    </head>
+    <body>
+        <header>
+            <h1>Bienvenidos a Mi Página Web</h1>
+            <p>Ésta es una página de ejemplo para el ejercicio</p>
+        </header>
+        <main>
+            <section>
+                <h2>Acerca de nosotros</h2>
+                <p>Somos una empresa dedicada a ofrecer soluciones web</p>
+            </section>
+
+            <section>
+                <h2>Nuestros Servicios</h2>
+                    <ol type="A">
+                        <li>Diseño Web</li>
+                        <li>Desarrollo Web</li>
+                        <li>Marketing Digital</li>
+                    </ol>
+                    <a href="https://www.ejemplo.com">Ver más servicios</a>
+            </section>
+
+            <!-- Ejercicio 2 -->
+            <section>
+                <form action="mailto:ejemplo@ejemplo.com" method="post">  
+                    <fieldset>
+                        <legend>Información Personal</legend>
+
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <br>
+                        
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                        <br>
+
+                        <label for="fecha">Fecha de nacimiento:</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                        <br>
+
+                        <label for="genero">Género:</label>
+                        <br>
+                        <input type="radio" id="masculino" name="genero" value="Masculino" required>
+                        <label for="masculino">Masculino</label><br>
+                        <input type="radio" id="femenino" name="genero" value="Femenino" required>
+                        <label for="femenino">Femenino</label><br>
+                        <input type="radio" id="otro" name="genero" value="Otro" required>
+                        <label for="otro">Otro</label>
+                        <br>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Información de Contacto</legend>
+
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                        <br>
+                        
+                        <label for="telef">Télefono:</label>
+                        <input type="tel" id="telef" name="telef" required>
+                        <br>
+
+                        <label for="direccion">Dirección</label>
+                        <textarea id="direccion" name="direccion"></textarea>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Información de Cuenta</legend>
+
+                        <label for="user">Nombre de usuario:</label>
+                        <input type="text" id="user" name="user" required>
+                        <br>
+                        
+                        <label for="pass">Contraseña:</label>
+                        <input type="password" id="pass" name="pass" required>
+                        <br>
+
+                        <label for="ConfPass">Confirma la contraseña:</label>
+                        <input type="password" id="ConfPass" name="ConfPass" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Preferencias</legend>
+                        
+                        <label for="color">Color Favorito:</label><br>
+                        <select id="color" name="color" required>
+                          <option value="rojo">Rojo</option>
+                          <option value="azul">Azul</option>
+                          <option value="verde">Verde</option>
+                          <option value="amarillo">Amarillo</option>
+                        </select><br>
+                        
+                        <input type="checkbox" id="terminos" name="terminos" required>
+                        <label for="terminos">Acepto los términos y condiciones</label>
+                    </fieldset>
+                    
+                    <input type="submit" value="Enviar">
+                </form>
+            <!-- /Ejercicio 2 -->
+
+        </main>
+
+        <footer>
+            <p><a href="mailto:info@miempresa.com">Enviar correo electrónico</a></p>
+            <p><a href="tel:+1234567890">Llamar por teléfono</a></p>
+            <p>&copy; Mi Empresa. Todos los derechos reservados.</p>
+        </footer>
+    </body>
+</html>
+<!-- /Ejercicio 1 -->
