@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>ejercicio-css-iniciacion-2</title>
+</head>
+<body>
+    <header>
+        <h1 id="titulo">Mi Portafolios</h1>
+        <nav>
+            <ul>
+                <li><i class="fas fa-star"></i><a href="#">Home</a></li>
+                <li><i class="fas fa-star"></i><a href="#">About</a></li>
+                <li><i class="fas fa-star"></i><a href="#">Services</a></li>
+                <li><i class="fas fa-star"></i><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <article class="proyecto destacado">
+            <div>
+                <h2>Article 1</h2>
+                <img src="Logo.png" alt="Logo de Batman">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            </div>
+            <div class="overlay"></div>
+        </article>
+        <article class="proyecto">
+            <div>
+                <h2>Article 2</h2>
+                <img src="Logo.png" alt="Logo de Batman">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            </div>
+            <div class="overlay"></div>
+        </article>
+        <article class="proyecto">
+            <div>
+                <h2>Article 3</h2>
+                <img src="Logo.png" alt="Logo de Batman">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            </div>
+            <div class="overlay"></div>
+        </article>
+        <article class="proyecto">
+            <div>
+                <h2>Article 4</h2>
+                <img src="Logo.png" alt="Logo de Batman">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            </div>
+            <div class="overlay"></div>
+        </article>
+        <article class="proyecto">
+            <div>
+                <h2>Article 5</h2>
+                <img src="Logo.png" alt="Logo de Batman">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            </div>
+            <div class="overlay"></div>
+        </article>
+        <article class="proyecto">
+            <div>
+                <h2>Article 6</h2>
+                <img src="Logo.png" alt="Logo de Batman">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            </div>
+            <div class="overlay"></div>
+        </article>
+    </section>
+    <section>
+        <form action="" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+    
+    <footer>
+        <div class="mensaje-oculto">
+            Este es un mensaje oculto
+        </div>
+            
+         <p>© 2025 Mi Portafolio | <a href="#inicio">Inicio</a> | <a href="#contacto">Contacto</a></p>
+        
+        <!-- Botón flotante "Subir" -->
+        <button class="subir" onclick="window.scrollTo(0, 0)">↑</button>
+    </footer>
+    
+</body>
+</html>

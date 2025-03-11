@@ -1,0 +1,332 @@
+/*Estilos generales*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/*Estilos Cabecera*/
+header {
+    background-color: RGB(30, 30, 30);
+    color: white;
+    padding: 20px;
+}
+
+#titulo {
+    font-family: 'Georgia', sans-serif;
+    text-align: center;
+}
+
+/*Estilos Navegación*/
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 10px 20px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: rgb(166, 9, 206);
+}
+
+.fas {
+    padding-right: 5px;
+}
+
+/*Estilos de sección*/
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilos Articulos Proyecto*/
+.proyecto {
+    position: relative;
+    width: 300px;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contenedor {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: lightblue;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay:active {
+    opacity: 1;
+}
+
+
+.proyecto img {
+    margin: 20px;
+    width: 100px;
+    height: 50px;
+}
+
+.proyecto:hover img {
+    opacity: 0.5;
+}
+
+.proyecto::first-letter {
+    font-size: 24px;
+    color: red;
+}
+
+.proyecto p::first-letter {
+    font-size: 24px;
+    color: red;
+}
+
+.proyecto.destacado {
+    background-color: rgb(255, 243, 133);
+}
+
+.proyecto:nth-child(3n) {
+    background-color: rgb(192, 192, 192);
+}
+
+/*Estilos Formulario*/
+form {
+    max-width: 600px;
+    width: 90%;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin: 20px;
+    display: block;
+    background-color: rgb(192, 192, 192);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 243, 133);
+    box-sizing: border-box;
+}
+
+input[type="email"] {
+    border: 3px solid rgb(2, 150, 46) !important;
+}
+
+textarea:focus {
+    outline: 3px solid rgb(0, 225, 255);
+}
+
+/* Footer */
+footer {
+    background-image: url('textura.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100px;
+    text-align: center;
+    position: relative;
+    color: rgb(0, 0, 0);
+}
+
+footer .mensaje-oculto {
+    display: none;
+}
+
+footer .subir {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(192, 192, 192);
+    color: rgb(255, 243, 133);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+footer .subir:hover {
+    background-color: rgb(255, 243, 133);
+    color: rgb(192, 192, 192);
+}
+
+footer .subir:focus {
+    outline: none;
+}
+
+
+footer a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+footer a:hover {
+    color: rgb(255, 243, 133);
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+
+    /* Estilos Cabecera */
+    header {
+        padding: 15px;
+    }
+
+    #titulo {
+        font-size: 1.8rem;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    /* Artículos del proyecto */
+    .proyecto {
+        width: 100%;
+        max-width: 600px;
+        margin: 10px 20px;
+    }
+
+    .proyecto img {
+        width: 80px;
+    }
+
+    /* Formulario */
+    form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    input,
+    textarea {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    /* Botón flotante */
+    footer .subir {
+        bottom: 10px;
+        right: 10px;
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Estilos Cabecera */
+    header {
+        padding: 10px;
+    }
+
+    #titulo {
+        font-size: 1.6rem;
+    }
+
+    nav ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    /* Artículos del proyecto */
+    .proyecto {
+        width: 100%;
+        margin: 5px 10px;
+    }
+
+    .proyecto img {
+        width: 60px;
+    }
+
+    .proyecto p {
+        font-size: 0.9rem;
+    }
+
+    /* Formulario */
+    form {
+        width: 100%;
+        margin: 10px 10px;
+        padding: 15px;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input,
+    textarea {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    /* Botón flotante */
+    footer .subir {
+        bottom: 5px;
+        right: 5px;
+        font-size: 16px;
+        padding: 6px 12px;
+        background-color: rgb(255, 243, 133);
+        color: rgb(192, 192, 192);
+    }
+
+    footer .subir:hover {
+        background-color: rgb(192, 192, 192);
+        color: rgb(255, 243, 133);
+    }
+}
