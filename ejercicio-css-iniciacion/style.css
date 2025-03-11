@@ -1,0 +1,245 @@
+/*Ejercicio 21*/
+:root {
+    --color-primario: #b9d3ff; 
+}
+
+/*Ejercicio 3*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*Ejercicio 10*/
+    font-family: 'Roboto','Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+div{
+    height: 50px;
+    margin-left: 50px;
+}
+
+/*Ejercicio 4*/
+.destacado {
+    font-weight: bold;
+}
+
+/* Ejercicio 5*/
+#contenedor {
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;      
+    background-color: var(--color-primario); 
+    padding: 20px;
+    text-align: center;
+}
+
+/*Ejercicio 6*/
+h2, h3{
+    font-family: 'helvetica', sans-serif;
+    color: #10af38;
+}
+
+/*Ejercicio 7 y Ejercicio 23*/
+.caja {
+    margin: 10px;      
+    background-color: var(--color-primario); 
+    padding: 20px;
+    border: 1px solid #000;
+    box-shadow:0.1em 0.1em 0.3em  #000;
+}
+
+/*Ejercicio 8*/
+.div600px{
+    width: 600px; 
+    margin: 0 auto;
+    background-color: #f8ffb9; 
+}
+
+/*Ejercicio 9*/
+.text-align-right {
+    margin:20px;
+    text-align: right;
+    text-decoration: underline;
+}
+
+/*ejercicio 11*/
+.background-gradient{
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, #6ca3b4, #90f7a1);
+}
+
+/*Ejercicio 12*/
+.redondo{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    background-color: blue;
+}
+
+/*Ejercicio 13*/
+.item {
+    display: inline-block;  
+    width: 30%;             
+    height: 150px;          
+    margin: 10px;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+.green {
+    background-color: green;
+}
+
+/*Ejercicio 14*/
+.mover {
+    position: relative; 
+    top: 15px;           
+    background-color: var(--color-primario); 
+}
+
+/*Ejercicio 15*/
+.contenedor {
+    position: relative;
+    width: 50%;
+    height: 75px;
+    margin-top:20px;
+    background-color: #f8ffb9;
+}
+.boton{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--color-primario);
+    transition: background-color 1s ease;
+}
+
+/*Ejercicio 17*/
+.boton:hover{
+    background-color: #45a049;
+ }
+
+/*Ejercicio 16*/
+.menu{ 
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #f8ffb9;
+}
+
+/*Ejercicio 18*/
+.animado {
+    width: 200px;
+    height: 50px;
+    background-color: var(--color-primario);
+    position: relative;
+    animation: moverDerecha 3s infinite alternate;
+}
+
+@keyframes moverDerecha {
+    0% {
+        transform: translateX(0); 
+    }
+    100% {
+        transform: translateX(300px);
+    }
+}
+
+/* Ejercicio 19 */ 
+@media (max-width: 600px) { 
+    .menu { flex-direction: column; } 
+    .ocultar {
+        display: none; 
+    }
+}
+
+/* Ejercicio 20 */
+a::before {
+    content: "\2192"; 
+    font-size: 25px;
+    font-weight: bold;
+    color: blue; 
+}
+
+/* Ejercicio 22 y Ejercicio 25*/
+.rotar {
+    margin:20px;
+    width: 150px;
+    height: 100px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    
+}
+.rotar:hover {
+    transform: rotate(45deg);
+    filter: grayscale(100%);
+}
+
+/* Ejercicio 24*/
+.texto-en-columnas {
+    column-count: 2; 
+    column-gap: 20px; 
+    width: 60%; 
+    margin-bottom: 50px;
+}
+
+/* Ejercicio 26*/
+.contenedor-imagen {
+    margin-top:30px;
+    position: relative;
+    display: inline-block;
+}
+
+.imagen {
+    display: block;
+    width: 100%;
+    height: 100px;
+    width: 150px;
+}
+
+.overlay {
+    position: absolute;
+    margin-left: 0px;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    border-radius: 48%;
+    transition: opacity 0.3s ease;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+
+/*Ejercicio 27*/
+.spinner {
+    margin: 20px;
+    margin-top: 80px;
+    height: 100px;
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 48%;
+    background-color: var(--color-primario);
+    position: relative;
+    animation: spin 1.5s linear infinite
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); 
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
