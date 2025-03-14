@@ -185,10 +185,9 @@ h2 {
 }
 
 .contenedor-productos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
-    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /*Estilo Filtros*/
@@ -202,7 +201,7 @@ select {
 }
 
 .producto {
-    width: 100%;
+    width: 350px;
     height: 460px;
     margin: 40px;
     padding: 20px;
