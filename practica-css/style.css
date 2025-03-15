@@ -175,6 +175,9 @@ body {
 /* Estilos productos */
 .seccion-productos {
     background: linear-gradient(to top, var(--color-fondo), var(--color-primario));
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
 h2 {
@@ -182,28 +185,27 @@ h2 {
     text-align: center;
     width: 100%;
     padding-top: 10px;
+    margin-bottom: 20px;
 }
 
 .contenedor-productos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 80%;
+    margin-left: 10px;
 }
 
 /*Estilo Filtros*/
 .filtros {
-    margin-left: 40px;
-}
-
-select {
-    background-color: var(--color-primario);
-    border: none;
+    margin-left: 20px;
+    width: 10%;
 }
 
 .producto {
-    width: 350px;
-    height: 460px;
-    margin: 40px;
+    width: 30%;
+    height: 560px;
     padding: 20px;
     border: none;
     background-color: var(--color-fondo);
@@ -373,7 +375,6 @@ select {
 }
 
 .tarjeta-carrito {
-    display: none;
     position: fixed;
     top: 10%;
     right: -300px;
@@ -386,11 +387,10 @@ select {
     box-shadow: 0 4px 8px var(--transpariencia);
     opacity: 0;
     z-index: 1;
-    transition: transform 1s ease, opacity 0.9s ease;
+    transition: transform 1s ease, opacity 0.5s ease;
 }
 
-.boton-carrito:hover~.tarjeta-carrito {
-    display: block;
+.animation {
     transform: translateX(-310px);
     opacity: 1;
 }
@@ -509,17 +509,18 @@ footer .subir:focus {
         border-radius: 15%;
     }
 
+    .contenedor-productos {
+        justify-content: space-around;
+        gap: 20px;
+    }
+
     .producto {
-        width: 175px;
-        margin: 40px;
-        height: 380px;
+        width: 200px;
+        height: 450px;
     }
 }
 
 @media (max-width: 430px) {
-    .contenedor-productos {
-        grid-template-columns: 1fr;
-    }
 
     .producto {
         width: 300px;
@@ -530,10 +531,10 @@ footer .subir:focus {
 
 @media (prefers-color-scheme: dark) {
 
-    header{
+    header {
         background-color: var(--color-primarioMOsc);
     }
-    
+
     body {
         color: var(--color-fondo);
         background-color: var(--color-texto);
@@ -557,7 +558,7 @@ footer .subir:focus {
         background-color: var(--color-primarioMOsc);
     }
 
-    footer{
+    footer {
         color: var(--color-fondo);
     }
 

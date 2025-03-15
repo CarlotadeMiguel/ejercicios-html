@@ -1,33 +1,33 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const categoriaElement = document.getElementById("categoria");
-    const productos = document.querySelectorAll(".producto");
-    const contadorElemento = document.getElementById("contador");
+document.addEventListener('DOMContentLoaded', () => {
+    const categoriaElement = document.querySelectorAll('input[name="filter"]');
+    const productos = document.querySelectorAll('.producto');
+    const contadorElemento = document.getElementById('contador');
+
     let numero = 100;
 
-    // Función para mostrar/ocultar productos basados en la categoría
-    function actualizarProductos() {
-        const categoriaSeleccionada = categoriaElement.value;
+    const actualizarProductos = (categoria) => {
+        productos.forEach(producto => {
+            producto.classList.toggle('mostrar', categoria === 'todos' || producto.classList.contains(categoria));
+        });
+    };
 
-        for (let i = 0; i < productos.length; i++) {
-            const producto = productos[i];
-            if (categoriaSeleccionada === "todos" || producto.classList.contains(categoriaSeleccionada)) {
-                producto.classList.add("mostrar");
-            } else {
-                producto.classList.remove("mostrar");
-            }
-        }
-    }
+    categoriaElement.forEach(categoria => categoria.addEventListener('change', (event) => actualizarProductos(event.target.value)));
 
-    categoriaElement.addEventListener("change", actualizarProductos);
-
-    // Contador
-    const intervalo = setInterval(() => {
+    const actualizarContador = () => {
         if (numero >= 0) {
             contadorElemento.textContent = numero--;
-        } else {
-            clearInterval(intervalo);
+            setTimeout(() => requestAnimationFrame(actualizarContador), 60000);
         }
-    }, 1000);
+    };
 
-    actualizarProductos();
+    mostrarCarrito = () => {
+        const botonCarrito = document.getElementById('botonCarrito');
+        const tarjetaCarrito = document.getElementById('tarjetaCarrito');
+        tarjetaCarrito.classList.toggle('animation');
+
+        botonCarrito.innerText = botonCarrito.innerText.includes('Mostrar') ? 'Ocultar carrito' : 'Mostrar carrito';
+    }
+
+    actualizarContador();
+    actualizarProductos('todos');
 });
