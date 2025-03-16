@@ -35,16 +35,15 @@
 
         <div class="carrito">
             <button id="botonCarrito" onclick="mostrarCarrito()" class="boton-carrito">Mostrar carrito</button>
-            <div class="tarjeta-carrito" id = "tarjetaCarrito">
+            <div class="tarjeta-carrito" id="tarjetaCarrito">
                 <h3>Carrito de Compras</h3>
-                <ul>
-                    <li>Producto 1: 19.99€</li>
-                    <li>Producto 2: 29.99€</li>
+                <ul id="lista-carrito">
+                    <li><p></p><button></button></li>
                 </ul>
+                <p id = "total"></p>
+                <button class="boton-comprar"> Comprar </button>
             </div>
         </div>
-
-        <h1>CMA</h1>
     </header>
 
     <section class="s-carrusel">
@@ -65,86 +64,90 @@
     </section>
 
     <section class="seccion-productos">
-        <h2>Productos</h2>
-        <div class="filtros">
-            <h3>Filtros</h3>
-            <div>
-                <input type="radio" id="todos" name="filter" value="todos" checked />
-                <label for="huey">Todos</label>
-            </div>
+        <div class="filtros-productos">
+            <div class="filtros">
+                <h3>Filtros</h3>
+                <div>
+                    <input type="radio" id="todos" name="filter" value="todos" checked />
+                    <label for="todos">Todos</label>
+                </div>
 
-            <div>
-                <input type="radio" id="electronica" name="filter" value="electronica" />
-                <label for="dewey">Electrónica</label>
-            </div>
+                <div>
+                    <input type="radio" id="electronica" name="filter" value="electronica" />
+                    <label for="electronica">Electrónica</label>
+                </div>
 
-            <div>
-                <input type="radio" id="ropa" name="filter" value="ropa" />
-                <label for="louie">Ropa</label>
-            </div>
+                <div>
+                    <input type="radio" id="ropa" name="filter" value="ropa" />
+                    <label for="ropa">Ropa</label>
+                </div>
 
-            <div>
-                <input type="radio" id="hogar" name="filter" value="hogar" />
-                <label for="louie">Hogar</label>
+                <div>
+                    <input type="radio" id="hogar" name="filter" value="hogar" />
+                    <label for="hogar">Hogar</label>
+                </div>
             </div>
-        </div>
-        <div class="contenedor-productos">
-            <div class="producto mostrar">
-                <div class="producto-imagen">
-                    <img src="producto.jpg" alt="Imagen del Producto">
+            <div class="contenedor-productos">
+                <h2>Productos</h2>
+                <div class="producto mostrar">
+                    <div class="producto-imagen">
+                        <img src="producto.jpg" alt="Imagen del Producto">
+                    </div>
+                    <h3 class="producto-nombre">Producto 1</h3>
+                    <p class="producto-precio">19.99€</p>
+                    <p class="descripcion">Descripción</p>
+                    <button class="producto-boton" id="0" onclick="addLi(id)">Añadir al carrito <div class="checkmark"></div></button>
                 </div>
-                <h3 class="producto-nombre">Producto 1</h3>
-                <p class="producto-precio">19.99€</p>
-                <p class="descripcion">Descripción</p>
-                <button class="producto-boton">Añadir al carrito <div class="checkmark"></div></button>
-            </div>
-            <div class="producto electronica mostrar">
-                <div class="producto-imagen">
-                    <img src="producto.jpg" alt="Imagen del Producto">
+                <div class="producto electronica mostrar">
+                    <div class="producto-imagen">
+                        <img src="producto.jpg" alt="Imagen del Producto">
+                    </div>
+                    <h3 class="producto-nombre">Producto 2</h3>
+                    <div class="contenedor-variantes">
+                        <img class="variante" src="producto.jpg" alt="Imagen del Producto" />
+                        <img class="variante" src="producto.jpg" alt="Imagen del Producto" />
+                        <img class="variante" src="producto.jpg" alt="Imagen del Producto" />
+                    </div>
+                    <p class="descripcion">Descripción</p>
+                    <p class="producto-precio">29.99€</p>
+                    <button class="producto-boton" id="1" onclick="addLi(id)">Añadir al carrito <div class="checkmark"></div></button>
                 </div>
-                <h3 class="producto-nombre">Producto 2</h3>
-                <div class="contenedor-variantes">
-                    <img class="variante" src="producto.jpg" alt="Imagen del Producto" />
-                    <img class="variante" src="producto.jpg" alt="Imagen del Producto" />
-                    <img class="variante" src="producto.jpg" alt="Imagen del Producto" />
+                <div class="producto ropa mostrar">
+                    <div class="producto-imagen">
+                        <img src="producto.jpg" alt="Imagen del Producto">
+                    </div>
+                    <h3 class="producto-nombre nombre-oferta">Producto 3</h3>
+                    <p class="descripcion">Descripción</p>
+                    <p class="producto-precio precio-oferta">9.99€</p>
+                    <button class="producto-boton" id="2" onclick="addLi(id)">Añadir al carrito<div class="checkmark"></div></button>
                 </div>
-                <p class="producto-precio">29.99€</p>
-                <p class="descripcion">Descripción</p>
-                <button class="producto-boton">Añadir al carrito <div class="checkmark"></div></button>
-            </div>
-            <div class="producto ropa mostrar">
-                <div class="producto-imagen">
-                    <img src="producto.jpg" alt="Imagen del Producto">
+                <div class="producto hogar mostrar">
+                    <div class="producto-imagen">
+                        <img src="producto.jpg" alt="Imagen del Producto">
+                    </div>
+                    <h3 class="producto-nombre">Producto 4</h3>
+                    <p class="descripcion">Descripción</p>
+                    <p class="producto-precio">19.99€</p>
+                    <button class="producto-boton" id="3" onclick="addLi(id)">Añadir al carrito<div class="checkmark"></div></button>
                 </div>
-                <h3 class="producto-nombre nombre-oferta">Producto 3</h3>
-                <p class="producto-precio precio-oferta">9.99€</p>
-                <p class="descripcion">Descripción</p>
-                <button class="producto-boton">Añadir al carrito<div class="checkmark"></div></button>
-            </div>
-            <div class="producto hogar mostrar">
-                <div class="producto-imagen">
-                    <img src="producto.jpg" alt="Imagen del Producto">
+                <div class="producto ropa mostrar">
+                    <div class="producto-imagen">
+                        <img src="producto.jpg" alt="Imagen del Producto">
+                    </div>
+                    <h3 class="producto-nombre">Producto 5</h3>
+                    <p class="descripcion">Descripción</p>
+                    <p class="producto-precio">19.99€</p>
+                    <button class="producto-boton" id="4" onclick="addLi(id)">Añadir al carrito</button>
                 </div>
-                <h3 class="producto-nombre">Producto 4</h3>
-                <p class="producto-precio">19.99€</p>
-                <p class="descripcion">Descripción</p>
-                <button class="producto-boton">Añadir al carrito<div class="checkmark"></div></button>
-            </div>
-            <div class="producto ropa mostrar">
-                <div class="producto-imagen">
-                    <img src="producto.jpg" alt="Imagen del Producto">
+                <div class="producto ropa mostrar">
+                    <div class="producto-imagen">
+                        <img src="producto.jpg" alt="Imagen del Producto">
+                    </div>
+                    <h3 class="producto-nombre">Producto 6</h3>
+                    <p class="descripcion">Descripción</p>
+                    <p class="producto-precio precio-oferta">49.99€</p>
+                    <button class="producto-boton" id="5" onclick="addLi(id)">Añadir al carrito</button>
                 </div>
-                <h3 class="producto-nombre">Producto 5</h3>
-                <p class="producto-precio">19.99€</p>
-                <button class="producto-boton">Añadir al carrito</button>
-            </div>
-            <div class="producto ropa mostrar">
-                <div class="producto-imagen">
-                    <img src="producto.jpg" alt="Imagen del Producto">
-                </div>
-                <h3 class="producto-nombre">Producto 6</h3>
-                <p class="producto-precio precio-oferta">19.99€</p>
-                <button class="producto-boton">Añadir al carrito</button>
             </div>
         </div>
     </section>
