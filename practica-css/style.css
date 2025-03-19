@@ -30,7 +30,6 @@ body {
 header {
     background-color: var(--color-primario);
     color: var(--color-fondo);
-    height: 10%;
     padding: 10px;
     text-align: center;
 }
@@ -103,7 +102,6 @@ h1 {
 
 .s-carrusel {
     background-color: var(--color-primario);
-    height: 20%;
 }
 
 .carrusel {
@@ -177,7 +175,6 @@ h1 {
 /* Estilos productos */
 .seccion-productos {
     background: linear-gradient(to top, var(--color-fondo), var(--color-primario));
-    height: 60%;
     
 }
 
@@ -190,9 +187,16 @@ h1 {
 
 /*Estilo Filtros*/
 .filtros {
-    padding-left: 2%;
+    margin-top: 8%;
+    margin-left: 2%;
+    padding:1%;
+    background-color: var(--color-fondo);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--transpariencia);
+
     width: 8%;
-    margin-top: 10%;
+    height: 30%;
+
 }
 
 /*Estilo productos*/
@@ -214,8 +218,9 @@ h2 {
 }
 
 .producto {
+    margin-top:3%;
+    margin-bottom:3%;
     width: 25%;
-    height: 46%;
     padding: 20px;
     border: none;
     background-color: var(--color-fondo);
@@ -407,9 +412,7 @@ h2 {
 /*Estilos Footer*/
 
 footer {
-    padding-top: 10%;
     padding-bottom: 1%;
-    height: 10%;
     text-align: center;
     position: relative;
     color: var(--color-texto);
@@ -479,13 +482,10 @@ footer .subir:focus {
 
     .producto {
         width: 33%;
-        height: 33%;
     }
 
     footer {
-        padding-top: 25%;
         padding-bottom: 1%;
-        height: 5%;
         font-size: 0.9rem;
         text-align: center;
         position: relative;
